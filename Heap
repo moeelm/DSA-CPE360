@@ -1,0 +1,10 @@
+Heap Data Strucutre:
+1. Binary Tree
+2. Balance = Nodes from 0 to D(depth) -2 have two children
+3. Left Justified = all leaf nodes are far left as possible
+4. "Heap Property" = the value of the parent must be greater than both children					
+
+
+First create the tree structure by going one level at a time and then left to right, then delete the root for the sorting to continue
+
+Don't use Heap sort if memory is an issue

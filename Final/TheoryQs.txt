@@ -1,0 +1,90 @@
+Mohammed Elmzaghi
+CPE 360
+Data Structures and Algorithm Analysis 
+"I pledge that I have abided by the Stevens Honor System"-Mohammed Elmzaghi
+Test-2
+
+1. Advantages of using a BST over a linked list or array is that searching is faster. Search is O(h) in BST while it is O(n) in linked list or array.
+
+2. The best case running time for BST is O(h). The performance starts to degrade for BST-search as it starts to get more unbalanced. At its worst, BST performs at O(logn). If we were to look for a key in 1 million records, the least number of comparisons to be made is about 20. The worst number of comparisons to be made in a BST is to go through every single node and check!
+
+3. The quicksort algorithm is as follows: find a pivot point and compare each value if it is less than or equal to the pivot, it will go on the left. If it is greater than or equal to the pivot, it will go on the right. Comparisons are then made to sort the elements once each element is in it's own "bucket". For the input 1,4,7,6,3,5,0,2,9,8:
+
+=> (1,4,7,6,3,5,0,2,9,[8])
+=> (1,4,7,6,3,5,0,[2]),([9])
+=> (1,[0]), (4,7,6,3,[5])
+=> ([0],[1]), (4,[3]), (7,[6])
+=> [0],[1],[3],[4],[6],[7]
+=> [0],[1],[2],[3],[4],[5],[6],[7],[8],[9]
+
+4. The mergesort algorithm is as follows: divide the elements into equal batches (if there are even number of elements). Continue to divide until there are single element batches. Then, begin to compare the elements and sort them in order of least to greatest. Merge each sorted batch together.
+For the input 1,4,7,6,3,5,0,2,9,8:
+
+=> (1,4,7,6,3), (5,0,2,9,8)
+=> (1,4,7), (6,3), (5,0,2), (9,8)
+=> (1,4), (7), (6), (3), (5,0), (2), (9), (8)
+=> (1), (4), (7), (6), (3), (5), (0), (2), (9), (8)
+=> (1,4), (7), (3,6), (0, 5), (2,9), (8)
+=> (1,4,7), (3,6), (0,2,5,9), (8)
+=> (1,3,4,6,7), (0, 2, 5, 8, 9)
+=> (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+5. Hash table for 31,22,94,452,42,193,64,35,226:
+
+(a) Chaining using linked lists
+[0]->NULL
+[1]->31->NULL
+[2]->22->452->42->NULL
+[3]->193->NULL
+[4]->94->64->NULL
+[5]->35->NULL
+[6]->226->NULL
+[7]->NULL
+[8]->NULL
+[9]->NULL
+
+(b) Linear probing
+[0] = 452
+[1] = 31
+[2] = 22
+[3] = 193
+[4] = 94
+[5] = 35
+[6] = 226
+[7] = 64
+[8] = 42
+[9] = empty
+
+6. Using the input (6, 15, 3, 21, 8, 17, 2, 14, 9), our heap data structure would look like:
+			21
+		  /  	\
+		 14  	17
+	    /  \    / \
+	   6    8  2   9
+
+First deletion of 6:
+			21
+		  /  	\
+		 14  	17
+	       \    / \
+	        8  2   9
+Second deletion of 8:
+			21
+		  /  	\
+		 14  	17
+	            / \
+	           2   9
+Third deletion of 2:
+			21
+		  /  	\
+		 14  	17
+	              \
+	               9
+
+7. 
+Pre-order: A, B, D, G, H, E, C, F, J, I
+In-order: G, H, D, E, B, A, C, F, I , J
+Post-order: G, H, D, E, B, I, J, F, C, A
+
+
+
